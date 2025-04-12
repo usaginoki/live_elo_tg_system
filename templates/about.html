@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}About - ELO Rating System{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title text-center mb-4">About the ELO Rating System</h1>
+                
+                <p class="card-text">
+                    The ELO Rating System is a method for calculating the relative skill levels of players in zero-sum games such as chess. It is named after its creator Arpad Elo, a Hungarian-American physics professor.
+                </p>
+                
+                <h3>How it works</h3>
+                <p>
+                    The ELO system calculates an expected score for each player based on their current rating. After a game, the actual result is compared with the expected result, and the rating is adjusted accordingly. Players gain more points for beating higher-rated opponents and lose more points when defeated by lower-rated opponents.
+                </p>
+                
+                <h3>Our Implementation</h3>
+                <p>
+                    In our system, all players start with a rating of 1500. The rating changes after each confirmed game, with the amount of change depending on:
+                </p>
+                <ul>
+                    <li>The difference between the players' ratings</li>
+                    <li>The score of the game</li>
+                    <li>A K-factor that determines the maximum possible adjustment</li>
+                </ul>
+                
+                <h3>Reporting Games</h3>
+                <p>
+                    To ensure fair play, all game results must be reported by one player and confirmed by the opponent. This prevents incorrect or fraudulent reports from affecting ratings.
+                </p>
+
+                <h3>How to use the system</h3>
+                <p>
+                    To use the system, you need to register via Telegram bot @nu_tt_alpha_bot. Then you can report your games and see the ratings of other players. Then follow the instructions in the bot.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
